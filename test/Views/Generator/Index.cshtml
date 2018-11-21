@@ -7,34 +7,35 @@
             <hr style="width:100%" />
 
             @using (Html.BeginForm())
-            {
-                @Html.ValidationSummary(true)
-                <div class="row">
-                    <div class="col-4">
-                        <div class="form-group">
-                            <div class="input-group mb-3">
-                                @Html.DropDownListFor(model => model.Type, new SelectListItem[] {
-                                    new SelectListItem(){ Text="Letras y numeros",Value="1"},
-                                    new SelectListItem(){ Text="Solo numeros", Value="2"},
-                                    new SelectListItem(){ Text="Solo Letras", Value="3"},
-                                    new SelectListItem(){ Text="Todos los caracteres", Value="4"}
-                                }, new { @class = "custom-select" })
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
+    {
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
 
-                        <div class="form-group">
-                            @Html.EditorFor(model => model.Size, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingrese largo" } })
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Generar Contraseña </button>
-                        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-group">
+                    <div class="input-group mb-3">
+                        @Html.DropDownListFor(model => model.Type, new SelectListItem[] {
+                            new SelectListItem(){ Text="Letras y numeros",Value="1"},
+                            new SelectListItem(){ Text="Solo numeros", Value="2"},
+                            new SelectListItem(){ Text="Solo Letras", Value="3"},
+                            new SelectListItem(){ Text="Todos los caracteres", Value="4"}
+                        }, new { @class = "custom-select" })
                     </div>
                 </div>
-            }
+            </div>
+            <div class="col-4">
+
+                <div class="form-group">
+                    @Html.EditorFor(model => model.Size, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingrese largo" } })
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Generar Contraseña </button>
+                </div>
+            </div>
+        </div>
+}
 
         </div>
     </div>

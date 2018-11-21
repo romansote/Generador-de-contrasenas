@@ -5,7 +5,6 @@
 /Users/casamac/Projects/test/test/bin/Debug/netcoreapp2.1/GeneradorDeContrasenas.pdb
 /Users/casamac/Projects/test/test/bin/Debug/netcoreapp2.1/GeneradorDeContrasenas.Views.dll
 /Users/casamac/Projects/test/test/bin/Debug/netcoreapp2.1/GeneradorDeContrasenas.Views.pdb
-/Users/casamac/Projects/test/test/obj/Debug/netcoreapp2.1/GeneradorDeContrasenas.csprojAssemblyReference.cache
 /Users/casamac/Projects/test/test/obj/Debug/netcoreapp2.1/GeneradorDeContrasenas.csproj.CoreCompileInputs.cache
 /Users/casamac/Projects/test/test/obj/Debug/netcoreapp2.1/GeneradorDeContrasenas.RazorAssemblyInfo.cache
 /Users/casamac/Projects/test/test/obj/Debug/netcoreapp2.1/GeneradorDeContrasenas.RazorAssemblyInfo.cs

@@ -30,8 +30,13 @@ namespace test.Controllers
         [HttpPost]
         public IActionResult Index(GeneratorModel generatorModel)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(generatorModel);
+            }
 
             ViewBag.Password = generatePassword(generatorModel.Type, generatorModel.Size);
+                
 
             return View(generatorModel);
         }

@@ -34,6 +34,8 @@ namespace test
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddMvc(options => options.MaxModelValidationErrors = 50);
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
