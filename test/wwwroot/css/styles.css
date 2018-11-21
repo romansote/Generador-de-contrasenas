@@ -1,0 +1,37 @@
+﻿body {
+    width: 100%;
+    background: #efefef !important;
+}
+
+#Container {
+    width: 50%;
+    margin: 0 auto;
+    background: #ffffff !important;
+    padding: 20px;
+    border: 1px solid #ecdede;
+    margin-top:4%;
+    min-height:100px;
+}
+
+h3 {
+    text-align:center !important;
+}
+
+.form-group {
+    padding:10px !important;
+}
+
+input.form-control.password {
+    height: 70px !important;
+    background: #c6e4e4 !important;
+    font-size: 31px !Important;
+    color: #444242 !important;
+    text-align: center !important;
+}
+
+msg-clbp {
+    transition: 2s !important;
+    -moz-transition: 2s !important;
+    -webkit-transition: 2s !important;
+    -o-transition: 2s !important;
+}

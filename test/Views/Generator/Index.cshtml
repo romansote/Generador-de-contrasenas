@@ -1,0 +1,56 @@
+﻿@model GeneratorModel
+<div align="center" id="Container">
+
+    <div class="row">
+        <div class="col-12">
+            <h3>Generar contraseña segura</h3>
+            <hr style="width:100%" />
+
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                @Html.DropDownListFor(model => model.Type, new SelectListItem[] {
+                                    new SelectListItem(){ Text="Letras y numeros",Value="1"},
+                                    new SelectListItem(){ Text="Solo numeros", Value="2"},
+                                    new SelectListItem(){ Text="Solo Letras", Value="3"},
+                                    new SelectListItem(){ Text="Todos los caracteres", Value="4"}
+                                }, new { @class = "custom-select" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+
+                        <div class="form-group">
+                            @Html.EditorFor(model => model.Size, new { htmlAttributes = new { @class = "form-control", placeholder = "Ingrese largo" } })
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Generar Contraseña </button>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+
+    @using (Html.BeginForm("copyClipBoard"))
+    {
+    <div class="cointainer-password">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control password" value="@ViewBag.Password" aria-label="Recipient's username" name="myInput" id="myInput" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" onclick="myFunction()" type="button" id="button-addon2"><i class="fas fa-paste"></i></button>
+            </div>
+        </div>
+        <div style="display:none" class="alert alert-warning " id="msg-clbp" role="alert">
+            ¡Contraseña copiada al Clipboard exitosamente !
+        </div>
+    </div>
+    }
+</div>
